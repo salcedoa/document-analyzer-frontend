@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import bookLogo from './assets/book.png'
 import './App.css'
 
 function App() {
@@ -9,25 +9,19 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+          <img src={bookLogo} className="logo" alt="Book logo" />
       </div>
-      <h1>Vite + React</h1>
+      <h1 className='title'>Documentation Analyzer</h1>
       <div className="card">
+        <p>Enter a documentation website address</p>
+        <input type='text' id='urlBox' name='urlBox'></input>
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          Analyze
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <footer className="footer">
+        <p>Built for the INM363: Individual Project module at <a href='https://city.ac.uk'>City, University of London</a></p>
+      </footer>
     </>
   )
 }
